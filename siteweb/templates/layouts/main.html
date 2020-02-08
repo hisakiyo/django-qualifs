@@ -1,0 +1,25 @@
+{% load static %}
+
+    {% block content %}
+        <h1>Main</h1>
+        <form method="post"  role="form" action="/">
+            {% csrf_token %}
+            <label for="username">Nom d'utilisateur</label>
+            <input type="text" name="username" placeholder="Utilisateur">
+            <label for="username">Mot de passe</label>
+            <input type="password" name="password" placeholder="Mot de passe">
+            <input type="submit" value="Connexion">
+        </form>
+
+        <form method="post"  role="form" action="/">
+            {% csrf_token %}
+            <label for="username">Nom d'utilisateur</label>
+            <input type="text" name="username" placeholder="Utilisateur">
+            <label for="username">Mot de passe</label>
+            <input type="password" name="password" placeholder="Mot de passe">
+            <label for="username">Confirmer le mot de passe</label>
+            <input type="password" name="password" placeholder="Mot de passe">
+            <input type="submit" value="Inscription">
+        </form>
+
+    {% endblock %}
